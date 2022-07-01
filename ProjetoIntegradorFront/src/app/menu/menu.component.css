@@ -1,0 +1,22 @@
+.ul li{
+    color: white !important;
+}
+
+.fs-16{
+    font-size: 16pt;
+}
+
+.fs-16:hover{
+    font-size: 20pt;
+    color: blue;
+}
+
+
+
+a{
+    cursor: pointer;
+}
+
+.fa-sign-out:hover{
+    color: red;
+}
