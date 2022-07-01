@@ -1,0 +1,59 @@
+
+
+.box {
+
+  height: 400px;
+  background: rgb(0, 0, 0, 0.514);
+  color: white;
+  border-radius: 10px;
+
+}
+
+.box1 {
+
+  height: 380px;
+  background: rgb(0, 0, 0, 0.514);
+  color: white;
+  border-radius: 10px;
+}
+
+.img-fundo {
+  background-image: url('https://i.imgur.com/Qj7Qchy.jpg');
+  background-color: rgb(168, 137, 137);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.imgcontainer2{
+  background-image: url(https://i.imgur.com/F5yemoC.jpeg);
+  background-size: cover;
+  width: 80%;
+  border-radius: 12px;
+  opacity: 60%;
+  color: red;
+
+}
+
+.imgcontainer3{
+  background-image: url(https://i.imgur.com/tjodahN.jpeg);
+  background-size: cover;
+  width: 80%;
+  border-radius: 12px;
+  opacity: 60%;
+  color: red;
+
+}
+
+.imgcontainer{
+  background-image: url(https://i.imgur.com/Qj7Qchy.jpg);
+  background-size: cover;
+  width: 100%;
+  border-radius: 12px;
+  opacity: 100%;
+
+}
+
