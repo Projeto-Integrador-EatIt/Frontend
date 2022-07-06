@@ -1,3 +1,17 @@
+.bg-cor{
+    background-color: #E4681B;
+    opacity: 1;
+}
+
+.logoCor{
+    color: white;
+}
+
+.nav-fixo{
+    position: fixed;
+    width: 100%;
+}
+
 .ul li{
     color: white !important;
 }
@@ -8,13 +22,23 @@
 
 .fs-16:hover{
     font-size: 20pt;
-    color: blue;
+    
 }
 
-
+.hoverCor:hover{
+    color: #b5f4bc !important; 
+}
 
 a{
     cursor: pointer;
+}
+
+.deco-sair{
+    text-decoration: none;
+}
+
+.sairHover:hover{
+    color: red !important;
 }
 
 .fa-sign-out:hover{
