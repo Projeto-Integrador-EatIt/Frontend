@@ -1,4 +1,6 @@
-
+#bgcor{
+    background-color: #E4681B !important;
+}
 
 ul.social-network{
     list-style: none;
@@ -17,10 +19,22 @@ ul.social-network li{
     padding: 10px;
 }
 
-.fa-envelope-o:hover{
-    color: red;
+.fa-cc-visa:hover{
+    color: rgb(0, 21, 212);
 }
 
-.fa-git-square:hover{
-    color: #424446;
+.fa-cc-mastercard:hover{
+    color: rgb(227, 243, 0);
+}
+
+.fa-cc-paypal:hover{
+    color: rgb(107, 147, 235);
+}
+
+.fa-barcode:hover{
+    color: rgb(48, 49, 53);
+}
+
+.fa-cutlery:hover{
+    color: rgb(255, 0, 34);
 }
