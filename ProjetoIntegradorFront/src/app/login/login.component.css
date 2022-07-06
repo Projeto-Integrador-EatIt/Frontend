@@ -11,6 +11,20 @@
 
 }
 
+
+input{
+    opacity: 85%;
+
+}
+
+button{
+    background-color: #ff6543;
+}
+
+select{
+    opacity: 85%;
+}
+
 .body {
     margin: 0;
 }
