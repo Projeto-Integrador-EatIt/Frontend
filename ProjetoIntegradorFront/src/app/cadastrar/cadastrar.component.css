@@ -63,22 +63,15 @@ select{
     margin-left: 5%;
 }
 
-.botao{
-    background-color: #ff6543;
-}
-
-
 .box {
-
+    margin-top: 40px;
+    margin-bottom: 40px;
     padding-top: 0px;
-    width: 700px;
-    height: 900px;
+    width: 600px;
+    height: 930px;
     background: rgb(0, 0, 0, 0.514);
     color: white;
     border-radius: 10px;
-
-
-
 }
 
 

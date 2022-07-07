@@ -17,10 +17,6 @@ input{
 
 }
 
-button{
-    background-color: #ff6543;
-}
-
 select{
     opacity: 85%;
 }
@@ -58,16 +54,14 @@ select{
 
 
 .box {
-
+    margin-top: 40px;
+    margin-bottom: 40px;
     padding-top: 0px;
     width: 500px;
     height: 650px;
     background: rgb(0, 0, 0, 0.514);
     color: white;
     border-radius: 10px;
-
-
-
 }
 
 

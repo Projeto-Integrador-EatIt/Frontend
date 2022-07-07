@@ -28,6 +28,6 @@ export class AuthService {
     if(environment.token != '' ){
       ok = true
     }
-    ok=true
+    return ok
   }
 }
