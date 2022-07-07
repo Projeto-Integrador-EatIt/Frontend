@@ -8,6 +8,13 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { ContatoComponent } from './contato/contato.component';
+import { HomeComponent } from "./home/home.component";
+import { FormsModule } from "@angular/forms";
+import { HashLocationStrategy,LocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,13 +24,19 @@ import { ContatoComponent } from './contato/contato.component';
     LoginComponent,
     CadastrarComponent,
     SobrenosComponent,
-    ContatoComponent
+    ContatoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
