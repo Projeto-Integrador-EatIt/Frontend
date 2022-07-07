@@ -17,34 +17,35 @@
           <div class="formulario">
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu Nome">
+            <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu Nome">
         </div>
 
             <div class="form-group">
                 <label for="usuario">Usuario</label>
-                <input class="form-control" type="text" name="usuario" id="usuario"
+                <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="usuario" id="usuario"
                     placeholder="usuario@email.com">
             </div>
+
             <div class="form-group">
                 <label for="foto">Foto</label>
-                <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da foto">
+                <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Link da foto">
             </div>
 
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input class="form-control" type="password" name="senha" id="senha"
+                <input (input)="confirmarSenha($event)" class="form-control" type="password" name="senha" id="senha"
                     placeholder="Digite sua senha">
             </div>
             <div class="form-group">
                 <label for="confirmaSenha">Confirmar Senha</label>
-                <input class="form-control" type="password" name="confirmaSenha" id="confirmaSenha"
+                <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmaSenha" id="confirmaSenha"
                     placeholder="Digite novamente sua senha">
             </div>
 
             <div class="form-group">
                 <label for="tipo">Tipo de Usuário</label>
                 <select class="form-control" name="tipo" id="tipo" >
-                    <option value="membro">Membro</option>
+                    <option value="membro">Normal</option>
                     <option value="adm">Administrador</option>
                     <option value=""></option>
                 </select>
@@ -53,7 +54,7 @@
             <br>
             <div class="botoes">
               <div class="d-flex justify-content-center">
-                <button type="submit" class="btn botao mr-4 text-white" >Entrar</button>
+                <button (click)='cadastrar()'type="submit" class="btn botao mr-4 text-white" >Entrar</button>
                 <button routerLink="/login" type="submit" class="btn btn-danger text-white">Cancelar</button>
 
               </div>
