@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    if(environment.token != ''){
+      environment.token = ''
+    }
     window.scroll(0,0)
   }
 
