@@ -1,0 +1,45 @@
+.fundo{
+    background-image: url('https://imgur.com/f10GXsQ.jpg');
+    background-color: rgb(73, 68, 68);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.jumb{
+    background-color: rgb(84, 83, 83);
+    opacity: 0.7;
+    padding-top: 150px;
+    color: solid;
+}
+input{
+    opacity: 80%;
+    width: 65%;
+
+}
+select{
+    opacity: 80%;
+    width: 65%;
+}
+textarea{
+    opacity: 80%;
+    width:65%;
+}
+
+.container {
+   
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+.botao{
+    background-color: #ff6543;
+}
+.ml-50 {
+    margin-left: 650px;
+  
+}
+   
