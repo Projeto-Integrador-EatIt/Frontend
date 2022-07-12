@@ -9,30 +9,29 @@
             <div class="col-md-6 ">
                
                 <div class="form-group">
-                    <label for="titulo">Nome</label>
-                    <input type="text" class="form-control" id="titulo" >
+                    <label for="nome">Nome</label>
+                    <input [(ngModel)]='produto.nome' type="text" class="form-control" id="nome" >
                 </div>
                 <div class="form-group">
-                    <label for="titulo">Preço</label>
-                    <input type="text" class="form-control" id="titulo" >
+                    <label for="valor">Preço</label>
+                    <input type="text" class="form-control" id="valor" >
                 </div>
                 <div class="form-group">
-                    <label for="texto">Descrição</label>
-                    <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="titulo">Peso(kg)</label>
-                    <input type="text" class="form-control" id="titulo" >
+                    <label for="peso">Peso(kg)</label>
+                    <input type="text" class="form-control" id="peso" >
                 </div>
                 <div class="form-group">
-                    <label for="titulo">Link da Foto</label>
-                    <input type="text" class="form-control" id="titulo" >
+                    <label for="foto">Link da Foto</label>
+                    <input type="text" class="form-control" id="foto" >
                 </div>
 
                 <div class="d-flex">
                     <button class="btn btn-danger mr-4 " routerLink="/inicio">Cancelar</button>
                     <button class="btn botao">Atualizar</button>
-
                 </div>
                 
             </div>

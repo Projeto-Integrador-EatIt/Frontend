@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Categoria } from 'src/app/model/Categoria';
+import { Produto } from 'src/app/model/Produto';
+import { ProdutosService } from 'src/app/service/produtos.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-edit-produto',
@@ -7,9 +12,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProdutoComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  produto: Produto = new Produto()
+  categoria: Categoria = new Categoria()
+  listaProdutos: Produto[]
+  
+
+  constructor(
+    private produtoService: ProdutosService,
+    private router: Router,
+    private route: ActivatedRoute
+
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0,0)
+    if(environment.token==''){
+      this.router.navigate(['/entrar'])
+    }
+    let id = this.route.snapshot.params['id']
+    this.findAllProdutos()
   }
 
+  
+ 
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
+  }
 }
