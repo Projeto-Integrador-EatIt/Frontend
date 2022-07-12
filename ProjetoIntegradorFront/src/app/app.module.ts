@@ -32,6 +32,7 @@ import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component
     HomeadminComponent,
     EditCategoriaComponent,
     EditProdutoComponent
+
   ],
   imports: [
     BrowserModule,
