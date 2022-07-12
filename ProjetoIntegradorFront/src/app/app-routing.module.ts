@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
+import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
+import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'sobrenos', component:SobrenosComponent},
   {path:'contato', component:ContatoComponent},
-  {path:'home', component: HomeComponent}
+  {path:'home', component: HomeComponent},
+  {path: 'edit-categoria/:id', component: EditCategoriaComponent},
+  {path: 'edit-produto/:id', component: EditProdutoComponent}
 ];
 
 @NgModule({
