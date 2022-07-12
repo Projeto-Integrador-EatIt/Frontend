@@ -12,8 +12,12 @@ import { HomeComponent } from "./home/home.component";
 import { FormsModule } from "@angular/forms";
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
 import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
 import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
+=======
+import { TesteComponent } from './teste/teste.component';
+>>>>>>> a20146ecc560fae72e593e13df881590bafbc73d
 
 
 
@@ -28,8 +32,12 @@ import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component
     SobrenosComponent,
     ContatoComponent,
     HomeComponent,
+<<<<<<< HEAD
     EditCategoriaComponent,
     EditProdutoComponent
+=======
+    TesteComponent
+>>>>>>> a20146ecc560fae72e593e13df881590bafbc73d
   ],
   imports: [
     BrowserModule,

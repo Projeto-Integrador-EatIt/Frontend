@@ -23,6 +23,10 @@ export class AuthService {
     return this.http.post<UsuarioLogin>('https://projetoeatit.herokuapp.com/usuarios/logar',usuarioLogin)
   }
 
+  getByIdUsuario(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`https://projetoeatit.herokuapp.com/usuarios/${id}`)
+  }
+
   logado(){
     let ok: boolean = false
     if(environment.token != '' ){
