@@ -12,6 +12,7 @@ import { HomeComponent } from "./home/home.component";
 import { FormsModule } from "@angular/forms";
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { TesteComponent } from './teste/teste.component';
 
 
 
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     CadastrarComponent,
     SobrenosComponent,
     ContatoComponent,
-    HomeComponent
+    HomeComponent,
+    TesteComponent
   ],
   imports: [
     BrowserModule,
