@@ -1,3 +1,23 @@
-.margt{
-    margin-top: 300px;
+.carouselExampleControlsNoTouching{
+    width: 200px !important;
+    height: 200px !important;
+    border: none;
+    
+}
+
+.valBol{
+    display: flex;
+    justify-content: end;
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+    color: #3e3e3e;
+}
+
+.preco{
+    display: flex;
+    justify-content: end;
+    font-size: 2rem;
+    line-height: 1.25rem;
+    color: #3e3e3e;
+    margin-top: 10px;
 }
