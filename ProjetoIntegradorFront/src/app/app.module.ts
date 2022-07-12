@@ -13,6 +13,8 @@ import { FormsModule } from "@angular/forms";
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeadminComponent } from './homeadmin/homeadmin.component';
+import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
+import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
 
 
 
@@ -27,7 +29,9 @@ import { HomeadminComponent } from './homeadmin/homeadmin.component';
     SobrenosComponent,
     ContatoComponent,
     HomeComponent,
-    HomeadminComponent
+    HomeadminComponent,
+    EditCategoriaComponent,
+    EditProdutoComponent
   ],
   imports: [
     BrowserModule,
