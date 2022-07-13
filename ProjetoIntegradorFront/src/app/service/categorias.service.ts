@@ -35,4 +35,8 @@ export class CategoriasService {
 
     }
 
+    deleteCategorias(id: number) {
+      return this.http.delete(`https://projetoeatit.herokuapp.com/categorias/${id}`, this.token)
+    }
+
 }
