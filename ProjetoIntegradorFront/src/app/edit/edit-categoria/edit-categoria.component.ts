@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment.prod';
 export class EditCategoriaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
 
   constructor(
     private categoriaService: CategoriasService,
@@ -28,14 +29,20 @@ export class EditCategoriaComponent implements OnInit {
     this.findByIdCategoria(id)
   }
 
-  findByIdCategoria(id:number){
+
+
+  findByIdCategoria(id: number){
     this.categoriaService.getByIdCategorias(id).subscribe((resp: Categoria)=>{
       this.categoria= resp
     })
   }
 
   atualizar(){
-   
+    this.categoriaService.putCategorias(this.categoria).subscribe((resp: Categoria)=>{
+      this.categoria = resp
+      alert('Categoria atualizada com sucesso!')
+      this.router.navigate(['/homeadmin'])
+    })
   }
 
 }

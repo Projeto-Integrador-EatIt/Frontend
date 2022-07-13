@@ -48,4 +48,12 @@ export class EditProdutoComponent implements OnInit {
       this.produto= resp
     })
   }
+
+  atualizar(){
+    this.produtoService.putProdutos(this.produto).subscribe((resp: Produto)=>{
+      this.produto = resp
+      alert('Produto atualizado com sucesso!')
+      this.router.navigate(['/homeadmin'])
+    })
+  }
 }
