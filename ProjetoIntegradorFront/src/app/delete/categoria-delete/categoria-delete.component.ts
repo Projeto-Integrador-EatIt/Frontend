@@ -26,11 +26,11 @@ export class CategoriaDeleteComponent implements OnInit {
     }
 
     this.idCategoria = this.route.snapshot.params['id']
-    this.findByIdTema(this.idCategoria)
+    this.findByIdCategoria(this.idCategoria)
 
   }
 
-  findByIdTema(id: number){
+  findByIdCategoria(id: number){
     this.categoriaService.getByIdCategorias(id).subscribe((resp: Categoria)=>{
       this.categoria = resp
     })

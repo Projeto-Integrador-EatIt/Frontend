@@ -21,6 +21,11 @@ export class ProdutosService {
     return this.http.get<Produto[]>('https://projetoeatit.herokuapp.com/produtos', this.token)
   }
 
+  getByIdProdutos(id: number): Observable<Produto>{
+    return this.http.get<Produto>(`https://projetoeatit.herokuapp.com/produtos/${id}`, this.token)
+
+  }
+
   postProdutos(produto: Produto) : Observable<Produto>{
     return this.http.post<Produto>('https://projetoeatit.herokuapp.com/produtos', produto, this.token)
   }
@@ -28,4 +33,10 @@ export class ProdutosService {
   deleteProdutos(id: number){
     return this.http.delete(`https://projetoeatit.herokuapp.com/produtos/${id}`, this.token)
   }
+
+  putProdutos(produto: Produto): Observable<Produto>{
+    return this.http.put<Produto>('https://projetoeatit.herokuapp.com/produtos', produto, this.token)
+
+  }
+
 }

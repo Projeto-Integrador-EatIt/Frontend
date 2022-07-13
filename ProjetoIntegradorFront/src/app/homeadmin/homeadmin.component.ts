@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriasService } from '../service/categorias.service';
 import { ProdutosService } from '../service/produtos.service';
+
 
 @Component({
   selector: 'app-homeadmin',
@@ -19,14 +21,20 @@ export class HomeadminComponent implements OnInit {
 
   idCategoria: number
 
+
   constructor(
     private categoriaService: CategoriasService,
-    private produtoService: ProdutosService
+    private produtoService: ProdutosService,
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
 
     this.getAllCategorias()
+    let id = this.route.snapshot.params['id']
+    this.findByIdCategoria(id)
+    this.getAllProdutos()
   }
 
   getAllCategorias(){
@@ -35,7 +43,7 @@ export class HomeadminComponent implements OnInit {
     })
   }
 
-  findByIdCategoria(){
+  findByIdCategoria(id: number){
     this.categoriaService.getByIdCategorias(this.idCategoria).subscribe((resp: Categoria) =>{
       this.categoria = resp
     })
