@@ -1,6 +1,3 @@
-<app-menu></app-menu>
-<app-edit-produto></app-edit-produto>
-<app-edit-categoria></app-edit-categoria>
-<app-rodape></app-rodape>
-
-
+<app-menu *ngIf="auth.logado()"></app-menu>
+<router-outlet></router-outlet>
+<app-rodape *ngIf="auth.logado()"></app-rodape>

@@ -25,4 +25,7 @@ export class ProdutosService {
     return this.http.post<Produto>('https://projetoeatit.herokuapp.com/produtos', produto, this.token)
   }
 
+  deleteProdutos(id: number){
+    return this.http.delete(`https://projetoeatit.herokuapp.com/produtos/${id}`, this.token)
+  }
 }
