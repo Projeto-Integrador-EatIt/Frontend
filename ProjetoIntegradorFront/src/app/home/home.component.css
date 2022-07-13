@@ -1,8 +1,16 @@
-body{
-    background-color: cadetblue;
+.bg{
+    background-image: radial-gradient( #ffffff, #dddddd, #ffffff);
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    border: 0px;
+    border-top: 2px solid #ff441f;
+    background-color: #dddddd;
 }
 .margin{
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .carouselExampleIndicators{
@@ -22,8 +30,8 @@ body{
 }
 
 .imgTam{
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .botao:hover{
