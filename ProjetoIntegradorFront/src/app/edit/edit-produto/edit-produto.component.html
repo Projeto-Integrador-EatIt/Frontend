@@ -14,19 +14,19 @@
                 </div>
                 <div class="form-group">
                     <label for="valor">Preço</label>
-                    <input type="text" class="form-control" id="valor" >
+                    <input [(ngModel)]='produto.valor' type="text" class="form-control" id="valor" >
                 </div>
                 <div class="form-group">
                     <label for="descricao">Descrição</label>
-                    <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
+                    <textarea [(ngModel)]='produto.descricao' class="form-control" name="descricao" id="descricao" rows="3"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="peso">Peso(kg)</label>
-                    <input type="text" class="form-control" id="peso" >
+                    <input [(ngModel)]='produto.peso' type="text" class="form-control" id="peso" >
                 </div>
                 <div class="form-group">
                     <label for="foto">Link da Foto</label>
-                    <input type="text" class="form-control" id="foto" >
+                    <input [(ngModel)]='produto.foto'type="text" class="form-control" id="foto" >
                 </div>
 
                 <div class="d-flex">

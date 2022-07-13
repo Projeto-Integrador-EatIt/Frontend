@@ -26,8 +26,13 @@ export class CategoriasService {
 
     }
 
-    postCategorias(tema: Categoria): Observable<Categoria>{
-      return this.http.post<Categoria>('https://projetoeatit.herokuapp.com/categorias', tema, this.token)
+    postCategorias(categoria: Categoria): Observable<Categoria>{
+      return this.http.post<Categoria>('https://projetoeatit.herokuapp.com/categorias', categoria, this.token)
+    }
+
+    putCategorias(categoria: Categoria): Observable<Categoria>{
+      return this.http.put<Categoria>('https://projetoeatit.herokuapp.com/categorias', categoria, this.token)
+
     }
 
 }
