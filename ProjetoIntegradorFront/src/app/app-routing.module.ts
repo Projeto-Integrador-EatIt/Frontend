@@ -5,6 +5,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
 import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
 import { HomeComponent } from './home/home.component';
+import { HomeadminComponent } from './homeadmin/homeadmin.component';
 import { LoginComponent } from './login/login.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'contato', component:ContatoComponent},
   {path:'home', component: HomeComponent},
   {path: 'edit-categoria/:id', component: EditCategoriaComponent},
-  {path: 'edit-produto/:id', component: EditProdutoComponent}
+  {path: 'edit-produto/:id', component: EditProdutoComponent},
+  {path: 'homeadmin', component: HomeadminComponent}
 ];
 
 @NgModule({
