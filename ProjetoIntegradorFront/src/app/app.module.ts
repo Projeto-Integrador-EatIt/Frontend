@@ -11,12 +11,13 @@ import { ContatoComponent } from './contato/contato.component';
 import { HomeComponent } from "./home/home.component";
 import { FormsModule } from "@angular/forms";
 import { HashLocationStrategy,LocationStrategy } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeadminComponent } from './homeadmin/homeadmin.component';
 import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
 import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { TokenInterceptorService } from "./service/token-interceptor.service";
 
 
 
@@ -47,6 +48,11 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
+  }, 
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
   }],
   bootstrap: [AppComponent]
 })

@@ -12,7 +12,6 @@ import { environment } from 'src/environments/environment.prod';
 export class EditCategoriaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
-  listaCategorias: Categoria[]
 
   constructor(
     private categoriaService: CategoriasService,
