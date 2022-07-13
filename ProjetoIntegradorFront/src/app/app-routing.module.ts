@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
 import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +22,7 @@ const routes: Routes = [
   {path: 'edit-categoria/:id', component: EditCategoriaComponent},
   {path: 'edit-produto/:id', component: EditProdutoComponent},
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
-
+  {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
   {path: 'homeadmin', component: HomeadminComponent}
 ];
 
