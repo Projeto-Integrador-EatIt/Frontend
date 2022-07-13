@@ -63,6 +63,20 @@ export class HomeadminComponent implements OnInit {
     })
  }
 
+ apagar(){
+
+  this.produtoService.deleteProdutos(this.idCategoria).subscribe(()=>{
+    alert('Produto apagado com sucesso!')
+    this.router.navigate(['/produto'])
+  })
+
+
+  this.categoriaService.deleteCategorias(this.idCategoria).subscribe(()=>{
+    alert('Categoria apagada com sucesso!')
+    this.router.navigate(['/categoria-delete'])
+  })
+}
+
  publicar(){
   this.categoria.id = this.idCategoria
   this.produto.categoria = this.categoria

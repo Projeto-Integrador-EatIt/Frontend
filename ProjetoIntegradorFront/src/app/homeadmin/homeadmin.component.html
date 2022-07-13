@@ -41,7 +41,7 @@
 
                 <div class="d-flex .flex-column justify-content-start align-items-center">
                   <button type="button" class="btn btn-sm btn-primary mr-2" [routerLink]="['/edit-produto', item.id]">Atualizar</button>
-                  <button type="button" class="btn btn-sm btn-danger mr-4">Deletar</button>
+                  <button type="button" class="btn btn-sm btn-danger mr-4" [routerLink]="['/produto-delete', item.id]" >Deletar</button>
                 </div>
 
 
@@ -101,7 +101,7 @@
               <p class="card-text">{{item.descricao}}</p>
               <div class="d-flex .flex-column justify-content-start align-items-center ">
                 <button type="button" class="btn btn-sm btn-primary mr-2" [routerLink]="['/edit-categoria', item.id]">Atualizar</button>
-                <button type="button" class="btn btn-sm btn-danger mr-4">Deletar</button>
+                <button type="button" class="btn btn-sm btn-danger mr-4"[routerLink]="['/categoria-delete', item.id]">Deletar</button>
               </div>
             </div>
           </div>
@@ -115,7 +115,6 @@
       </div>
 
     </div>
-
   </div>
 
 

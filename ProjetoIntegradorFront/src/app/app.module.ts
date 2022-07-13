@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeadminComponent } from './homeadmin/homeadmin.component';
 import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
 import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
 
 
@@ -31,7 +33,9 @@ import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component
     HomeComponent,
     HomeadminComponent,
     EditCategoriaComponent,
-    EditProdutoComponent
+    EditProdutoComponent,
+    CategoriaDeleteComponent,
+    ProdutoDeleteComponent
 
   ],
   imports: [
