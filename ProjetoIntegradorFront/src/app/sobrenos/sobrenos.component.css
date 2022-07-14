@@ -1,25 +1,40 @@
 
-
-.box {
-
-  height: 400px;
-  background: rgb(0, 0, 0, 0.514);
-  color: white;
-  border-radius: 10px;
-
+.jumb{
+  background-image: url('https://imgur.com/hpk33p9.png');
+  background-color: rgba(23, 20, 20, 0.744);
+  background-blend-mode: multiply;
+  background-size: cover;
+  opacity: 0.9;
+  
+  
+  
 }
+.titulo{
+  color:#EAAB51;
+  font-size: 50px;
+  text-align-last: center !important;
+}
+.subtit{
+  background-color: #EAAB51;
+}
+
+.colortext{
+  color:#441910;
+}
+
 
 .box1 {
 
   height: 380px;
-  background: rgb(0, 0, 0, 0.514);
-  color: white;
+  background: #FAFAFA(107, 104, 103);
+  color: #441910;
+  font-style:  Georgia, serif;
   border-radius: 10px;
 }
 
 .img-fundo {
-  background-image: url('https://i.imgur.com/Qj7Qchy.jpg');
-  background-color: rgb(168, 137, 137);
+ 
+  background-color: #FAFAFA;
   background-blend-mode: multiply;
   background-attachment: fixed;
   background-size: cover;
@@ -28,32 +43,45 @@
   margin-right: 0;
 }
 
+.botao{
+  background-color:  rgb(255, 68, 31);
+  
+}
+
 .imgcontainer2{
-  background-image: url(https://i.imgur.com/F5yemoC.jpeg);
+  background-image: url(https://imgur.com/OVlwpc5.jpeg);
+  background-color: rgb(84, 83, 83);
   background-size: cover;
-  width: 80%;
-  border-radius: 12px;
-  opacity: 60%;
-  color: red;
+  width: 70%;
+  border-radius: 5px;
+  
 
 }
 
 .imgcontainer3{
-  background-image: url(https://i.imgur.com/tjodahN.jpeg);
+  background-image: url(https://imgur.com/R5XsFC2.jpeg);
   background-size: cover;
-  width: 80%;
-  border-radius: 12px;
-  opacity: 60%;
-  color: red;
+  width: 70%;
+  border-radius: 5px;
+
 
 }
 
 .imgcontainer{
-  background-image: url(https://i.imgur.com/Qj7Qchy.jpg);
+  background-image: url(https://imgur.com/OVlwpc5.jpg);
   background-size: cover;
   width: 100%;
   border-radius: 12px;
   opacity: 100%;
 
 }
+.fa-github-square:hover{
+  color: black;
+
+}
+.fa-linkedin-square:hover{
+  color: rgb(65, 65, 182);
+}
+
+
 
