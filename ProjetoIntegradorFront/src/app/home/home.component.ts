@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Categoria } from '../model/Categoria';
 import { CategoriasService } from '../service/categorias.service';
+
 
 @Component({
   selector: 'app-home',
@@ -12,6 +14,8 @@ import { CategoriasService } from '../service/categorias.service';
 export class HomeComponent implements OnInit {
   massas: Categoria = new Categoria()
   listaCategorias: Categoria[];
+
+  carrinho = environment.carrinho
 
   constructor(
     private router: Router,
@@ -33,4 +37,15 @@ export class HomeComponent implements OnInit {
   })
 
 }
+
+
+
+  adCarrinho(id: number){
+    this.carrinho.push(id)
+    Swal.fire({
+      title: 'Produto adicionado ao carrinho!',
+      icon: 'success'
+    })
+  }
+
 }
