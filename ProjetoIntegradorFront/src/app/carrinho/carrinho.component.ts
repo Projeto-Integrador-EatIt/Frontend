@@ -14,6 +14,7 @@ export class CarrinhoComponent implements OnInit {
   carrinho = environment.carrinho
   produto: Produto = new Produto()
   listaProdutos: Produto[]
+  lProdutos: Produto[]
   soma = 0
 
   constructor(
@@ -22,6 +23,13 @@ export class CarrinhoComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    if(environment.token == ''){
+      this.router.navigate(['/login'])
+    }
+
+    this.findProdutoById
+    this.mostrarProdutos(this.carrinho)
+    
     this.carrinhoCompleto()
   }
 
@@ -75,6 +83,21 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
+  mostrarProdutos(array: number[]){
+    array.forEach((resp: number)=>{
+      let time = this.produtoService.getByIdProdutos(resp)
+      this.lProdutos.push(time)
+    })
 
-
+    /*
+    let x = 0
+    while(array.forEach <= x){
+      this.produtoService.getByIdProdutos(array[x]).subscribe((resp: Produto)=>{
+      this.produto = resp
+      this.lProdutos.push(this.produto)
+      x = x++ 
+      })
+    }
+    */
+  }
 }

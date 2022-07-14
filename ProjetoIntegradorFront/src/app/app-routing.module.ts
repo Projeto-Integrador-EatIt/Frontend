@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
   {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
   {path: 'homeadmin', component: HomeadminComponent},
-  {path: 'carrinho', component: CarrinhoComponent,  data: {isHeader: true}}
+  {path: 'carrinho', component: CarrinhoComponent}
 ];
 
 @NgModule({
