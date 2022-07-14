@@ -1,43 +1,44 @@
-<div class="fundo text-white mt-5 mb-5">
-    <div class="container justify-content-center mt-5 mb-5 ">
-        <div class="row d-flex justify-content-center">
-        </div>
-        <div class="col-md-12 mt-5">
-            <h1 class=" mt-5 mb-5">Atualizar Produtos</h1>
-        </div>
-        <div class="row d-flex r">
-            <div class="col-md-6 ">
-               
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input [(ngModel)]='produto.nome' type="text" class="form-control" id="nome" >
-                </div>
-                <div class="form-group">
-                    <label for="valor">Preço</label>
-                    <input [(ngModel)]='produto.valor' type="text" class="form-control" id="valor" >
-                </div>
-                <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea [(ngModel)]='produto.descricao' class="form-control" name="descricao" id="descricao" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="peso">Peso(kg)</label>
-                    <input [(ngModel)]='produto.peso' type="text" class="form-control" id="peso" >
-                </div>
-                <div class="form-group">
-                    <label for="foto">Link da Foto</label>
-                    <input [(ngModel)]='produto.foto'type="text" class="form-control" id="foto" >
-                </div>
-
-                <div class="d-flex">
-                    <button class="btn btn-danger mr-4 " routerLink="/homeadmin">Cancelar</button>
-                    <button class="btn botao" (click)="atualizar()">Atualizar</button>
-                </div>
-                
-            </div>
-            <div class="ml-50 d-flex " >
-                <img src="https://imgur.com/Ul52VVg.png" width="500px" height="500px">
-            </div>
+<div class="fundo">
+    <div class="jumbotron jumbotron-fluid jumb">
+        <div class="container text-white  fw-bold mb-4">
+            <h1 class="display-4">Atualizar Produtos</h1>
+         
         </div>
     </div>
+
+    <div class="container text-white caixa ">
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome do Produto</label>
+                <input [(ngModel)]='produto.nome' type="text" class="form-control" id="nome">
+            </div>
+            <div class="form-group">
+                <label for="valor">Preço</label>
+                <input [(ngModel)]='produto.valor' type="text" class="form-control" id="valor">
+
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <textarea [(ngModel)]='produto.descricao' class="form-control" name="descricao" id="descricao"
+                    rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso(kg)</label>
+                <input [(ngModel)]='produto.peso' type="text" class="form-control" id="peso">
+            </div>
+            <div class="form-group">
+                <label for="foto">Link da Foto</label>
+                <input [(ngModel)]='produto.foto' type="text" class="form-control" id="foto">
+            </div>
+
+            <div class="d-flex">
+                <button class="btn btn-danger mr-4 " routerLink="/homeadmin">Cancelar</button>
+                <button class="btn botao" (click)="atualizar()">Atualizar</button>
+            </div>
+        </form>
+        <div class="ml-50 d-flex ">
+            <img src="https://imgur.com/Ul52VVg.png" width="500px" height="500px">
+        </div>
+    </div>
+
 </div>
