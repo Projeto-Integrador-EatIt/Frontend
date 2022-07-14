@@ -31,7 +31,7 @@ export class ProdutosService {
   }
 
   deleteProdutos(id: number){
-    return this.http.delete(`https://projetoeatit.herokuapp.com/produtos/${id}`, this.token)
+    return this.http.delete(`https://projetoeatit.herokuapp.com/${id}`, this.token)
   }
 
   putProdutos(produto: Produto): Observable<Produto>{

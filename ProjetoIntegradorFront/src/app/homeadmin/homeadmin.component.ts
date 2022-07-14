@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriasService } from '../service/categorias.service';
@@ -31,10 +32,15 @@ export class HomeadminComponent implements OnInit {
 
   ngOnInit() {
 
+    if(environment.token == ''){
+      this.router.navigate(['/login'])
+    }
+
     this.getAllCategorias()
     let id = this.route.snapshot.params['id']
     this.findByIdCategoria(id)
     this.getAllProdutos()
+    
   }
 
   getAllCategorias(){
