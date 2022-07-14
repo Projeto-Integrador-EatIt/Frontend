@@ -22,7 +22,7 @@ export class CategoriaDeleteComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/login'])
     }
 
     this.idCategoria = this.route.snapshot.params['id']
@@ -39,7 +39,7 @@ export class CategoriaDeleteComponent implements OnInit {
   apagar(){
     this.categoriaService.deleteCategorias(this.idCategoria).subscribe(()=>{
       alert('Categoria apagada com sucesso!')
-      this.router.navigate(['/categoria-delete'])
+      this.router.navigate(['/homeadmin'])
     })
   }
 

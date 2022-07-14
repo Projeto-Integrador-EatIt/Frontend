@@ -22,7 +22,7 @@ export class ProdutoDeleteComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/login'])
     }
 
     this.idProduto = this.route.snapshot.params['id']
@@ -39,7 +39,7 @@ export class ProdutoDeleteComponent implements OnInit {
   apagar(){
     this.produtoService.deleteProdutos(this.idProduto).subscribe(()=>{
       alert('Produto apagado com sucesso!')
-      this.router.navigate(['/produto-delete'])
+      this.router.navigate(['/homeadmin'])
     })
   }
 
