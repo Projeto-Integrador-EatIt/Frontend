@@ -17,16 +17,17 @@
 }
 
 .fs-16{
-    font-size: 16pt;
+    font-size: 15pt;
 }
 
 .fs-16:hover{
-    font-size: 20pt;
+    font-size: 17pt;
     
 }
 
 .hoverCor:hover{
-    color: #b5f4bc !important; 
+    color: #ffdc8a !important;
+    text-decoration: none; 
 }
 
 a{
@@ -43,4 +44,9 @@ a{
 
 .fa-sign-out:hover{
     color: red;
+}
+
+.carrinho:hover{
+    color: #5ef170 !important;
+    
 }
