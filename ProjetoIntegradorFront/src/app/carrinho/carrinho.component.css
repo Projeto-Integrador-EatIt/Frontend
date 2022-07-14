@@ -1,0 +1,22 @@
+.bg{
+    background-color: #fafafa;
+    height: 100vh;
+}
+
+.tm-max {
+    max-height: 150px;
+  }
+
+.margin{
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.cor{
+    background-color: #ff441f;
+    color: white;
+}
+
+.bor{
+    border: solid  #ff441f;
+}

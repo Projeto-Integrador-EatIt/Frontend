@@ -18,6 +18,7 @@ import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { TokenInterceptorService } from "./service/token-interceptor.service";
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 
@@ -36,7 +37,8 @@ import { TokenInterceptorService } from "./service/token-interceptor.service";
     EditCategoriaComponent,
     EditProdutoComponent,
     CategoriaDeleteComponent,
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
+    CarrinhoComponent
 
   ],
   imports: [

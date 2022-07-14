@@ -21,8 +21,8 @@ hr {
 }
 
 .botao{
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     background-image: linear-gradient(white, #ff441f);
     margin-right: 10px;
     border: solid 2px #ff441f;
@@ -35,8 +35,8 @@ hr {
 }
 
 .botao:hover{
-    width: 125px;
-    height: 125px;
+    width: 155px;
+    height: 155px;
 }
 
 .valBol{
