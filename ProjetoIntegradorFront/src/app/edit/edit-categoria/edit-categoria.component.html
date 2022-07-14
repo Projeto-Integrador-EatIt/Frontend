@@ -1,31 +1,30 @@
-<div class="fundo text-white mt-5 mb-5">
-<div class="container justify-content-center mt-5 mb-5 ">
-    <div class="row d-flex justify-content-center">
+<div class="fundo">
+    <div class="jumbotron jumbotron-fluid jumb">
+        <div class="container text-white  fw-bold mb-4">
+            <h1 class="display-4">Atualizar Categorias</h1>
+
+        </div>
     </div>
-    <div class="col-md-12 mt-5">
-        <h1 class=" mt-5 mb-5">Atualizar Categoria</h1>
-    </div>
-    <div class="row d-flex">
-        <div class="col-md-6 ">
+
+    <div class="container text-white caixa ">
+        <form>
             <div class="form-group">
                 <label for="descricao">Tipo:</label>
-                <input type="text" class="form-control" id="tipo" 
-                [(ngModel)]='categoria.tipo'>
+                <input type="text" class="form-control" id="tipo" [(ngModel)]='categoria.tipo'>
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
-                <input type="text" class="form-control" id="descricao"
-                [(ngModel)]='categoria.descricao'>
+                <input type="text" class="form-control" id="descricao" [(ngModel)]='categoria.descricao'>
             </div>
             <div class="d-flex">
                 <button class="btn btn-danger mr-4 " routerLink="/homeadmin">Cancelar</button>
                 <button class="btn botao" (click)="atualizar()">Atualizar</button>
             </div>
-
-        </div>
+        </form>
     </div>
+
+
     <div class="ml-50 d-flex">
         <img src="https://imgur.com/YZDeTVw.png" width="400px" height="400px">
     </div>
-</div>
 </div>

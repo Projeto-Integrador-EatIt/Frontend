@@ -28,7 +28,7 @@ export class CarrinhoComponent implements OnInit {
     }
 
     this.findProdutoById
-    this.mostrarProdutos(this.carrinho)
+    /*this.mostrarProdutos(this.carrinho)*/
     
     this.carrinhoCompleto()
   }
@@ -83,11 +83,11 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  mostrarProdutos(array: number[]){
+ /* mostrarProdutos(array: number[]){
     array.forEach((resp: number)=>{
       let time = this.produtoService.getByIdProdutos(resp)
       this.lProdutos.push(time)
-    })
+    })*/
 
     /*
     let x = 0
@@ -100,4 +100,3 @@ export class CarrinhoComponent implements OnInit {
     }
     */
   }
-}
