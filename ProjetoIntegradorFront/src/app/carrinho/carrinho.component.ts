@@ -25,8 +25,9 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit() {
     if(environment.token == ''){
       this.router.navigate(['/login'])
-    }
-
+    }   
+    window.scroll(0,0)
+    
     this.findProdutoById
     /*this.mostrarProdutos(this.carrinho)*/
     

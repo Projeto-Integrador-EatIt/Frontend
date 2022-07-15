@@ -24,6 +24,7 @@ export class CategoriaDeleteComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
+    window.scroll(0,0)
 
     this.idCategoria = this.route.snapshot.params['id']
     this.findByIdCategoria(this.idCategoria)

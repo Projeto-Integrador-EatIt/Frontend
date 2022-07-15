@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-sobrenos',
@@ -9,7 +10,11 @@ export class SobrenosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    if(environment.token != ''){
+      environment.token = ''
+    }
+    window.scroll(0,0)
   }
 
 }
