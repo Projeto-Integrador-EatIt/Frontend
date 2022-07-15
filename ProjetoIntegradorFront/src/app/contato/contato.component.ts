@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contato',
@@ -7,12 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
+  nome: string
+  email:string
+  assunto:string
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
     window.scroll(0,0)
   }
 
+  enviar(){
 
+      Swal.fire({
+        title: 'Mensagem enviada com sucesso, em breve retornaremos o contato!',
+        icon: 'success'
+      }
+      )
+      this.router.navigate(['/home'])
+    }
 }
