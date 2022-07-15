@@ -63,7 +63,7 @@ export class CarrinhoComponent implements OnInit {
     } else if(this.listaProdutos.length > 0) {
       Swal.fire(
         'Muito obrigado pela compra!',
-        'Você acabou de nos ajudar a avançar a <b> erradicação da pobreza</b> no mundo!',
+        'Você acabou de nos ajudar a <b> Erradicar a fome</b> no mundo!',
         'success'
         //,
         //confirmButtonText: 'Cool',
