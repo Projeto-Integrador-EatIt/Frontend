@@ -117,7 +117,19 @@
                                     <div class="col-md-8">
                                         <div class="card-body">
                                             <h3 class="card-title">{{item.nome}}</h3>
-                                            <a href="#" class="badge badge-danger mb-3">Vegetariano</a>
+                                            
+
+                                            <div class="p-2"[ngSwitch]="item.categoria.id">
+                    
+                
+                                                <span class="badge badge-succes mb-3"*ngSwitchCase="16">Vegetariano</span>
+                                                <span class="badge badge-danger mb-3"*ngSwitchCase="15">Carnes</span>
+                                                <span class="badge badge-primary mb-3"*ngSwitchCase="14">Sobremesa</span>
+                                                <span class="badge badge-warning mb-3"*ngSwitchCase="12">Massas</span>
+                                                
+                                            </div>
+
+
                                             <p class="card-text text-truncate">{{item.descricao}}
                                             </p>
                                             <div class="accordion show">

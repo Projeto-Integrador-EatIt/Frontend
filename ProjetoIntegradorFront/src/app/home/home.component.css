@@ -1,5 +1,5 @@
 .bg{
-    background-image: radial-gradient( #ffffff, #dddddd, #ffffff);
+    background-color: #fafafa;
 }
 
 hr {
@@ -7,7 +7,7 @@ hr {
     height: 1px;
     border: 0px;
     border-top: 2px solid #ff441f;
-    background-color: #dddddd;
+    background-color: #ffffff;
 }
 .margin{
     margin-top: 60px;
@@ -29,15 +29,7 @@ hr {
     
 }
 
-.jumb{
-    background-image: url('https://i.imgur.com/RBvKRcd.png');
-    height: auto;
-    width: auto;
-    background-color: rgba(23, 20, 20, 0.744);
-    background-blend-mode: multiply;
-    background-size: cover;
-    opacity: 1;
-}  
+
 
 
 
