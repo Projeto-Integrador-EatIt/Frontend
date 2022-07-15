@@ -35,7 +35,7 @@ export class HomeadminComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
-
+    window.scroll(0,0)
     this.getAllCategorias()
     let id = this.route.snapshot.params['id']
     this.findByIdCategoria(id)

@@ -30,6 +30,7 @@ export class EditProdutoComponent implements OnInit {
     if(environment.token==''){
       this.router.navigate(['/login'])
     }
+    window.scroll(0,0)
     let id = this.route.snapshot.params['id']
     this.findByIdProdutos(id)
     this.findAllProdutos()

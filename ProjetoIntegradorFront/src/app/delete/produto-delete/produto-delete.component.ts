@@ -24,7 +24,7 @@ export class ProdutoDeleteComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
-
+    window.scroll(0,0)
     this.idProduto = this.route.snapshot.params['id']
     this.findByIdProduto(this.idProduto)
 
