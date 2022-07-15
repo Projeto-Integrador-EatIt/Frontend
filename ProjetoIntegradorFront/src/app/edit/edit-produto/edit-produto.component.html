@@ -11,26 +11,34 @@
         <form>
             <div class="form-group mt-5">
                 <label for="nome">Nome do Produto</label>
-                <input [(ngModel)]='produto.nome' type="text" class="form-control" id="nome">
+                <input [(ngModel)]="produto.nome" name="nome" type="text" class="form-control" id="nome">
             </div>
             <div class="form-group">
                 <label for="valor">Preço</label>
-                <input [(ngModel)]='produto.valor' type="text" class="form-control" id="valor">
+                <input [(ngModel)]="produto.valor" type="text" class="form-control" id="valor" name="valor">
 
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição</label>
-                <textarea [(ngModel)]='produto.descricao' class="form-control" name="descricao" id="descricao"
+                <textarea [(ngModel)]="produto.descricao" class="form-control" name="descricao" id="descricao" name="descricao"
                     rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="peso">Peso(kg)</label>
-                <input [(ngModel)]='produto.peso' type="text" class="form-control" id="peso">
+                <input [(ngModel)]= "produto.peso" type="text" class="form-control" id="peso" name="peso">
             </div>
             <div class="form-group">
                 <label for="foto">Link da Foto</label>
-                <input [(ngModel)]='produto.foto' type="text" class="form-control" id="foto">
+                <input [(ngModel)]='produto.foto' type="text" class="form-control" id="foto" name="foto">
             </div>
+            <div class="form-group">
+                <label for="texto">Escolha uma categoria</label>
+                <select name="categoria" id="categoria"class="form-control" [(ngModel)]="idCategoria">
+                    <option *ngFor="let item of listaCategorias" value="{{item.id}}">
+                    {{item.tipo}}
+                    </option>
+                </select>
+              </div>
 
             <div class="d-flex">
                 <button class="btn btn-danger mr-4 " routerLink="/homeadmin">Cancelar</button>
