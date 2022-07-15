@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Produto } from './../model/Produto';
+import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
-import { Produto } from '../model/Produto';
-import { ProdutosService } from '../service/produtos.service';
 import Swal from 'sweetalert2';
+import { ProdutosService } from '../service/produtos.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -13,8 +13,7 @@ import Swal from 'sweetalert2';
 export class CarrinhoComponent implements OnInit {
   carrinho = environment.carrinho
   produto: Produto = new Produto()
-  listaProdutos: Produto[]
-  lProdutos: Produto[]
+  listaProdutos: Array<Produto> = []
   soma = 0
 
   constructor(
@@ -25,12 +24,8 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit() {
     if(environment.token == ''){
       this.router.navigate(['/login'])
-    }   
-    window.scroll(0,0)
-    
-    this.findProdutoById
-    /*this.mostrarProdutos(this.carrinho)*/
-    
+    }
+
     this.carrinhoCompleto()
   }
 
@@ -51,20 +46,28 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
+  removerProduto(produto: Produto){
+      this.listaProdutos.splice(this.produto)
+    Swal.fire({
+      title: 'Produto removido!',
+      icon: 'success'
+    })
+  }
+
   finalizarCompra() {
     if(environment.token == '') {
       Swal.fire({
         title: 'Você precisa estar logado!',
-        icon: 'warning'
+        icon: 'warning'        
       }
       )
       this.router.navigate(['/login'])
       // alert('Você precisa estar logado!')
-
+      
     } else if(this.listaProdutos.length > 0) {
       Swal.fire(
         'Muito obrigado pela compra!',
-        'Você acabou de nos ajudar a <b> Erradicar a fome</b> no mundo!',
+        'Você acabou de nos ajudar a avançar a <b> erradicação da pobreza</b> no mundo!',
         'success'
         //,
         //confirmButtonText: 'Cool',
@@ -77,27 +80,13 @@ export class CarrinhoComponent implements OnInit {
     } else {
       Swal.fire({
         title: 'Seu carrinho está vazio!',
-        icon: 'warning'
+        icon: 'warning'        
       }
       )
       //alert('Seu carrinho está vazio!')
     }
   }
 
- /* mostrarProdutos(array: number[]){
-    array.forEach((resp: number)=>{
-      let time = this.produtoService.getByIdProdutos(resp)
-      this.lProdutos.push(time)
-    })*/
 
-    /*
-    let x = 0
-    while(array.forEach <= x){
-      this.produtoService.getByIdProdutos(array[x]).subscribe((resp: Produto)=>{
-      this.produto = resp
-      this.lProdutos.push(this.produto)
-      x = x++ 
-      })
-    }
-    */
-  }
+
+}
