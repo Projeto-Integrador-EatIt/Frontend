@@ -29,6 +29,14 @@ hr {
     
 }
 
+
+
+.carrosel{
+    max-height:600px;
+    height: auto;
+    padding: -15;
+}
+
 .imgTam{
     width: 80px;
     height: 80px;
