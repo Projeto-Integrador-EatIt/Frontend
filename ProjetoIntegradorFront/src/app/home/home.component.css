@@ -29,6 +29,16 @@ hr {
     
 }
 
+.jumb{
+    background-image: url('https://i.imgur.com/RBvKRcd.png');
+    height: auto;
+    width: auto;
+    background-color: rgba(23, 20, 20, 0.744);
+    background-blend-mode: multiply;
+    background-size: cover;
+    opacity: 1;
+}  
+
 
 
 .carrosel{

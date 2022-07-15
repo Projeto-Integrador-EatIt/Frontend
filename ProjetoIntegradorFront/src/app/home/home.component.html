@@ -96,10 +96,6 @@
 
         <!--Cards-->
         <div class="container-fluid justify-content-center">
-            <div class="p-3 mr-5 ml-5 bg-laranja text-white d-flex justify-content-center w-auto fw">
-                <p>Produtos cadastrados</p>
-            </div>
-            <hr class="black" width="500px">
 
             <div class="row">
 
@@ -112,25 +108,11 @@
                         <div class="col-lg-6 col-sm-6" *ngFor="let item of massas.produto">
                             <div class="shadow card mb-4">
                                 <div class="row no-gutters">
-                                    <div class="col-md-4 mt-4 row row-cols-1 ">
-                                        <div class="">
-                                            <img src="{{item.foto}}" class=" rounded float-left  img-fluid hov pl-3" width="150px"
-                                                height="150px" alt="...">
-                                        </div>
-                                        <div >
+                                    <div class="col-md-4 mt-4 ">
 
-                                            <div class="d-flex justify-content-end mr-4 mb-3">
-                                                <div class="text-info text-lg align-content-center preco fontdiff">
-                                                    {{item.valor | currency : 'BRL'}}</div>
-                                            </div>
-
-                                            <div class="d-flex .flex-column justify-content-end align-items-center mb-3">
+                                        <img src="{{item.foto}}" class=" rounded float-left img-fluid hov ml-3" width="150px"
+                                            height="150px" alt="...">
                                         
-                                                <button type="button"
-                                                    class="btn btn-sm btn-success mr-4" (click)="adCarrinho(item.id)">Adicionar </button>
-                                                
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
@@ -140,7 +122,6 @@
                                             </p>
                                             <div class="accordion show">
                                                 <button class="btn btn-link collapsing" data-target="collapseinfo">
-
                                                 </button>
                                                 <div> 
                                                     <div class="card-body collapse">
@@ -157,8 +138,20 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="d-flex justify-content-between aling-items-center mr-4 mb-3">
 
-                                    
+                                                    <div class="d-flex align-items-center">
+                                                        <button type="button" class="btn btn-sm btn-success mr-4" (click)="adCarrinho(item.id)">
+                                                        Adicionar 
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="text-info text-lg preco mb-2">
+                                                        {{item.valor | currency : 'BRL'}}
+                                                    </div>
+
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -171,3 +164,8 @@
 
                     </div>
                 </div>
+
+
+    <img src="https://i.imgur.com/fJN8pNI.png" width="1500"  height="500px" class="d-block img-fluid carrosel jumb" alt="...">
+
+            
