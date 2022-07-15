@@ -14,15 +14,17 @@
     background-color: rgba(23, 20, 20, 0.744);
     background-blend-mode: multiply;
     background-size: cover;
-    opacity: 0.9;
-    
-    
-    
+    opacity: 1; 
+  }
+  .hr{
+    background-color: #EAAB51;
   }
   .titulo{
     color:#EAAB51;
-    font-size: 50px;
+    font-size: 60px;
     text-align-last: center !important;
+    text-shadow: #070707
+    !important;
   }
   .subtit{
     background-color: #EAAB51;
