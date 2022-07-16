@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
 
@@ -19,8 +20,15 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    if(environment.token != ''){
-      environment.token = ''
+    if(environment.token == ''){
+      Swal.fire({
+        title: 'Seu login expirou, por favor faça login novamente!',
+        icon: 'info',
+        timer: 3500,
+        showConfirmButton: false    
+      }
+      )
+      this.router.navigate(['/login'])
     }
     window.scroll(0,0)
   }
@@ -38,6 +46,14 @@ export class LoginComponent implements OnInit {
     }, erro =>{
       if(erro.status == 401){
         alert('Usuario ou senha errados')
+          Swal.fire({
+            title: 'Usuário ou senha errados!',
+            icon: 'info',
+            timer: 3500,
+            showConfirmButton: false    
+          }
+          )
+      
       }
     })
   }

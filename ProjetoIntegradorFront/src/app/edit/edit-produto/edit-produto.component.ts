@@ -5,6 +5,7 @@ import { Produto } from 'src/app/model/Produto';
 import { CategoriasService } from 'src/app/service/categorias.service';
 import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-produto',
@@ -30,8 +31,14 @@ export class EditProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    window.scroll(0,0)
-    if(environment.token==''){
+    if(environment.token == ''){
+      Swal.fire({
+        title: 'Seu login expirou, por favor faça login novamente!',
+        icon: 'info',
+        timer: 3500,
+        showConfirmButton: false    
+      }
+      )
       this.router.navigate(['/login'])
     }
     window.scroll(0,0)
@@ -78,7 +85,13 @@ export class EditProdutoComponent implements OnInit {
     this.produtoService.putProdutos(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
       alert('Produto atualizado com sucesso!')
-
+        Swal.fire({
+          title: 'Produto atualizado com sucesso!',
+          icon: 'info',
+          timer: 3500,
+          showConfirmButton: false    
+        }
+        )
       this.router.navigate(['/homeadmin'])
     })
   }

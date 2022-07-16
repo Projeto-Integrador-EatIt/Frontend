@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/model/Produto';
 import { ProdutosService } from 'src/app/service/produtos.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-produto-delete',
@@ -22,6 +23,13 @@ export class ProdutoDeleteComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
+      Swal.fire({
+        title: 'Seu login expirou, por favor faça login novamente!',
+        icon: 'info',
+        timer: 3500,
+        showConfirmButton: false    
+      }
+      )
       this.router.navigate(['/login'])
     }
     window.scroll(0,0)

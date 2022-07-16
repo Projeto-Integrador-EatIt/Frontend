@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriasService } from '../service/categorias.service';
@@ -33,6 +34,13 @@ export class HomeadminComponent implements OnInit {
   ngOnInit() {
 
     if(environment.token == ''){
+      Swal.fire({
+        title: 'Seu login expirou, por favor faça login novamente!',
+        icon: 'info',
+        timer: 3500,
+        showConfirmButton: false    
+      }
+      )
       this.router.navigate(['/login'])
     }
     window.scroll(0,0)

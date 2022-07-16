@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastrar',
@@ -33,14 +34,25 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar(){
     if(this.usuario.senha != this.confirmSenha){
-      alert('As senhas devem ser iguais.')
+      Swal.fire({
+        title: 'As senhas devem ser iguais.',
+        icon: 'warning'        
+      }
+      )
     }else{
       this.authService
       .cadastrar(this.usuario)
       .subscribe((resp: Usuario)=>{
         this.usuario = resp
-        this.router.navigate(['/entrar'])
-        alert('usuário cadastrado com sucesso!')
+        this.router.navigate(['/login'])
+        Swal.fire({
+          title: 'Usuário cadastrado com sucesso!',
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false        
+        }
+        )
+        
       })
     }
   }

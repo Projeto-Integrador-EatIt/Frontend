@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sobrenos',
@@ -13,6 +14,13 @@ export class SobrenosComponent implements OnInit {
 
   ngOnInit(){
     if(environment.token == ''){
+      Swal.fire({
+        title: 'Seu login expirou, por favor faça login novamente!',
+        icon: 'info',
+        timer: 3500,
+        showConfirmButton: false    
+      }
+      )
       this.router.navigate(['/login'])
     }
     window.scroll(0,0)

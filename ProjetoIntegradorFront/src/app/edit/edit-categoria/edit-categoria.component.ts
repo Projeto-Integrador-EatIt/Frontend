@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { CategoriasService } from 'src/app/service/categorias.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-categoria',
@@ -22,7 +23,14 @@ export class EditCategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    if(environment.token==''){
+    if(environment.token == ''){
+      Swal.fire({
+        title: 'Seu login expirou, por favor faça login novamente!',
+        icon: 'info',
+        timer: 3500,
+        showConfirmButton: false    
+      }
+      )
       this.router.navigate(['/login'])
     }
     
@@ -41,7 +49,15 @@ export class EditCategoriaComponent implements OnInit {
   atualizar(){
     this.categoriaService.putCategorias(this.categoria).subscribe((resp: Categoria)=>{
       this.categoria = resp
-      alert('Categoria atualizada com sucesso!')
+      
+        Swal.fire({
+          title: 'Categoria atualizada com sucesso!',
+          icon: 'info',
+          timer: 3500,
+          showConfirmButton: false    
+        }
+        )
+       
       this.router.navigate(['/homeadmin'])
     })
   }

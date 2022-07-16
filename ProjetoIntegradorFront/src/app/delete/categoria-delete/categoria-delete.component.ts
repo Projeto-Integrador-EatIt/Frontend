@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { CategoriasService } from 'src/app/service/categorias.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-categoria-delete',
@@ -22,6 +23,13 @@ export class CategoriaDeleteComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
+      Swal.fire({
+        title: 'Seu login expirou, por favor faça login novamente!',
+        icon: 'info',
+        timer: 3500,
+        showConfirmButton: false    
+      }
+      )
       this.router.navigate(['/login'])
     }
     window.scroll(0,0)
@@ -40,6 +48,14 @@ export class CategoriaDeleteComponent implements OnInit {
   apagar(){
     this.categoriaService.deleteCategorias(this.idCategoria).subscribe(()=>{
       alert('Categoria apagada com sucesso!')
+        Swal.fire({
+          title: 'Categoria apagada com sucesso!',
+          icon: 'info',
+          timer: 3500,
+          showConfirmButton: false    
+        }
+        )
+        
       this.router.navigate(['/homeadmin'])
     })
   }
