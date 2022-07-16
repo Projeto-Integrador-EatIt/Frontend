@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
   }
 
   adCarrinho(id: number){
-    this.carrinho.push(id)
+    this.carrinho.unshift(id)
     Swal.fire({
       title: 'Produto adicionado ao carrinho!',
       icon: 'success'

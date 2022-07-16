@@ -25,7 +25,7 @@ export class CarrinhoComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/login'])
     }
-
+    window.scroll(0,0)
     this.carrinhoCompleto()
   }
 
@@ -48,8 +48,8 @@ export class CarrinhoComponent implements OnInit {
 
   removerProduto(produto: Produto){
     const index = this.listaProdutos.indexOf(produto)
-    if(index !== 0){
-      this.listaProdutos.splice(index, 1);
+    if(index !== -1){
+      this.listaProdutos.splice(0, 1)
       environment.carrinho.splice(index, 1)
       this.soma -= this.produto.valor
       if(this.listaProdutos.length == 0 ){
@@ -78,7 +78,7 @@ export class CarrinhoComponent implements OnInit {
     } else if(this.listaProdutos.length > 0) {
       Swal.fire(
         'Muito obrigado pela compra!',
-        'Você acabou de nos ajudar a avançar a <b> erradicação da pobreza</b> no mundo!',
+        'Você acabou de nos ajudar a acabar com a <b>Fome</b> no mundo!',
         'success'
         //,
         //confirmButtonText: 'Cool',
