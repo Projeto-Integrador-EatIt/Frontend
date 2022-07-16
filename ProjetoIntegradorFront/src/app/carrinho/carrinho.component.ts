@@ -46,13 +46,13 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  removerProduto(produto: Produto){
+  /*removerProduto(produto: Produto){
       this.listaProdutos.splice(this.produto)
     Swal.fire({
       title: 'Produto removido!',
       icon: 'success'
     })
-  }
+  }*/
 
   finalizarCompra() {
     if(environment.token == '') {

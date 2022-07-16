@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -8,11 +9,11 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class SobrenosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(){
-    if(environment.token != ''){
-      environment.token = ''
+    if(environment.token == ''){
+      this.router.navigate(['/login'])
     }
     window.scroll(0,0)
   }

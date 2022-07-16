@@ -19,6 +19,9 @@ export class ContatoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if(environment.token == ''){
+      this.router.navigate(['/login'])
+    }
     window.scroll(0,0)
   }
 
