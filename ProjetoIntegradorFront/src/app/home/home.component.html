@@ -63,7 +63,7 @@
                 </div>
 
                 <div>
-                    <button class="btn botao shadow"><img class="imgTam" (click)="GetCategoriasById(5)"
+                    <button class="btn botao shadow"><img class="imgTam" (click)="GetCategoriasById(18)"
                             src="https://cdn-icons-png.flaticon.com/512/684/684736.png" alt=""></button>
                     <p class="d-flex justify-content-center fw">Carnes</p>
                 </div>
@@ -104,6 +104,7 @@
                         <p class=""></p>
                     </div>
 
+
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-6 col-sm-6" *ngFor="let item of massas.produto">
                             <div class="shadow card mb-4">
@@ -118,30 +119,13 @@
                                         <div class="card-body">
                                             <h3 class="card-title">{{item.nome}}</h3>
                                             <div class=""[ngSwitch]="badge">
-                                                <div class="badge bg-danger text-white mb-4" *ngSwitchCase="12">Massas</div>
+                                                <div class="badge bg-warning text-white mb-4" *ngSwitchCase="12">Massas</div>
                                                 <div class="badge bg-success text-white mb-4" *ngSwitchCase="5">Vegetariano</div>
-                                                <div class="badge bg-success text-white mb-4" *ngSwitchCase="13">Sobremesas</div>
+                                                <div class="badge bg-primary text-white mb-4" *ngSwitchCase="13">Sobremesas</div>
+                                                <div class="badge bg-danger text-white mb-4" *ngSwitchCase="18">Carne</div>
                                             
                                             <p class="card-text text-truncate">{{item.descricao}}
                                             </p>
-                                            <div class="accordion show">
-                                                <button class="btn btn-link collapsing" data-target="collapseinfo">
-                                                </button>
-                                                <div> 
-                                                    <div class="card-body collapse">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
-                                                        accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                                        non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                        nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                                                        put a bird on it squid single-origin coffee nulla assumenda
-                                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                                        wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                                                        excepteur butcher vice lomo. Leggings occaecat craft beer
-                                                        farm-to-table, raw denim aesthetic synth nesciunt you probably
-                                                        haven't heard of them accusamus labore sustainable VHS.
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="d-flex justify-content-between aling-items-center mr-4 mb-3">
 
                                                     <div class="d-flex align-items-center">
@@ -160,16 +144,63 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-
-
-
                     </div>
+
+                    <div class="row d-flex align-items-center" *ngIf="condition == false">
+                        <div class="col-lg-6 col-sm-6" *ngFor="let item of listaProdutos">
+                            <div class="shadow card mb-4">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4 mt-4 ">
+
+                                        <img src="{{item.foto}}" class=" rounded float-left img-fluid hov ml-3" width="150px"
+                                            height="150px" alt="...">
+                                        
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{item.nome}}</h3>
+                                            <div class=""[ngSwitch]="item.categoria.id">
+                                                <div class="badge bg-warning text-white mb-4" *ngSwitchCase="12">Massas</div>
+                                                <div class="badge bg-success text-white mb-4" *ngSwitchCase="5">Vegetariano</div>
+                                                <div class="badge bg-primary text-white mb-4" *ngSwitchCase="13">Sobremesas</div>
+                                                <div class="badge bg-danger text-white mb-4" *ngSwitchCase="18">Carne</div>
+                                            
+                                            <p class="card-text text-truncate">{{item.descricao}}
+                                            </p>
+                                            <div class="d-flex justify-content-between aling-items-center mr-4 mb-3">
+
+                                                    <div class="d-flex align-items-center">
+                                                        <button type="button" class="btn btn-sm btn-success mr-4" (click)="adCarrinho(item.id)">
+                                                        Adicionar 
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="text-info text-lg preco mb-2">
+                                                        {{item.valor | currency : 'BRL'}}
+                                                    </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
+            </div>
+        </div>
+    </div>
 
 
-    <img src="https://i.imgur.com/fJN8pNI.png" width="1500"  height="500px" class="d-block img-fluid carrosel jumb" alt="...">
+<div class="container-fluid d-flex justify-content-center mt-5 img-fluid p-0">
+    <img src="https://i.imgur.com/fJN8pNI.png" height="500px" class="img-fluid " alt="...">
+</div>
+    
 
             
