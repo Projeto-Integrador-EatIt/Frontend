@@ -46,13 +46,24 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  /*removerProduto(produto: Produto){
-      this.listaProdutos.splice(this.produto)
+  removerProduto(produto: Produto){
+    const index = this.listaProdutos.indexOf(produto)
+    if(index !== 0){
+      this.listaProdutos.splice(index, 1);
+      environment.carrinho.splice(index, 1)
+      this.soma -= this.produto.valor
+      if(this.listaProdutos.length == 0 ){
+        this.soma = 0
+      }
+    }
     Swal.fire({
       title: 'Produto removido!',
       icon: 'success'
     })
-  }*/
+    
+  }
+
+  
 
   finalizarCompra() {
     if(environment.token == '') {
