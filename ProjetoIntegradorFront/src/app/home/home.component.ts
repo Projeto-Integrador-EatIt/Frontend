@@ -14,6 +14,7 @@ import { CategoriasService } from '../service/categorias.service';
 export class HomeComponent implements OnInit {
   massas: Categoria = new Categoria()
   listaCategorias: Categoria[];
+  badge: number
 
   carrinho = environment.carrinho
 
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit {
   GetCategoriasById(id: number){
     this.categoriaService.getByIdCategorias(id).subscribe((resp: Categoria) => {
       this.massas = resp
+      this.badge=resp.id
   })
 
 }

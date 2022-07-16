@@ -1,5 +1,5 @@
 .bg{
-    background-image: radial-gradient( #ffffff, #dddddd, #ffffff);
+    background-color: #fafafa;
 }
 
 hr {
@@ -7,7 +7,7 @@ hr {
     height: 1px;
     border: 0px;
     border-top: 2px solid #ff441f;
-    background-color: #dddddd;
+    background-color: #ffffff;
 }
 .margin{
     margin-top: 60px;
@@ -28,6 +28,8 @@ hr {
     border: solid 2px #ff441f;
     
 }
+
+
 
 
 
