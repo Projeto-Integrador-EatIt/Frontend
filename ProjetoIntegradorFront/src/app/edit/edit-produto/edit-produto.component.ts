@@ -84,10 +84,10 @@ export class EditProdutoComponent implements OnInit {
     this.produto.categoria = this.categoria
     this.produtoService.putProdutos(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      alert('Produto atualizado com sucesso!')
+      // alert('Produto atualizado com sucesso!')
         Swal.fire({
           title: 'Produto atualizado com sucesso!',
-          icon: 'info',
+          icon: 'success',
           timer: 3500,
           showConfirmButton: false    
         }

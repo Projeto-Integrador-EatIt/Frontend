@@ -20,7 +20,8 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    if(environment.token == ''){
+    if(environment.token != ''){
+      environment.token = ''
       Swal.fire({
         title: 'Seu login expirou, por favor faça login novamente!',
         icon: 'info',
@@ -45,10 +46,10 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home'])
     }, erro =>{
       if(erro.status == 401){
-        alert('Usuario ou senha errados')
+        
           Swal.fire({
             title: 'Usuário ou senha errados!',
-            icon: 'info',
+            icon: 'error',
             timer: 3500,
             showConfirmButton: false    
           }

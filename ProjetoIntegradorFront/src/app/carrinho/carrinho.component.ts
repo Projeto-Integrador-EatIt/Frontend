@@ -101,7 +101,6 @@ export class CarrinhoComponent implements OnInit {
         icon: 'warning'        
       }
       )
-      //alert('Seu carrinho está vazio!')
     }
   }
 

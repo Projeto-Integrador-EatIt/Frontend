@@ -52,7 +52,7 @@ export class EditCategoriaComponent implements OnInit {
       
         Swal.fire({
           title: 'Categoria atualizada com sucesso!',
-          icon: 'info',
+          icon: 'success',
           timer: 3500,
           showConfirmButton: false    
         }
