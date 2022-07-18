@@ -56,7 +56,7 @@
                 </div>
 
                 <div>
-                    <button class="btn botao shadow" ><img class="imgTam" (click)="GetCategoriasById(10)"
+                    <button class="btn botao shadow" ><img class="imgTam" (click)="GetCategoriasById(5)"
                             src="https://images.vexels.com/media/users/3/189361/isolated/lists/0f05bb906b5486024ddfe1ea8f0cbd8f-traco-de-icone-de-guacamole-de-chips-de-tortilla.png"
                             alt=""></button>
                     <p class="d-flex justify-content-center fw">Vegetariano</p>
@@ -119,10 +119,12 @@
                                         <div class="card-body">
                                             <h3 class="card-title">{{item.nome}}</h3>
                                             <div class=""[ngSwitch]="badge">
-                                                <div class="badge bg-warning text-white mb-4" *ngSwitchCase="12">Massas</div>
+                                                <div class="badge bg-warning text-white mb-4" *ngSwitchCase="19">Massas</div>
                                                 <div class="badge bg-success text-white mb-4" *ngSwitchCase="5">Vegetariano</div>
-                                                <div class="badge bg-primary text-white mb-4" *ngSwitchCase="13">Sobremesas</div>
-                                                <div class="badge bg-danger text-white mb-4" *ngSwitchCase="18">Carne</div>
+                                                <div class="badge bg-primary text-white mb-4" *ngSwitchCase="14">Sobremesas</div>
+                                                <div class="badge bg-danger text-white mb-4" *ngSwitchCase="15">Carne</div>
+                                                <div class="badge bg-warning  text-white mb-4" *ngSwitchCase="20">Salgados</div>
+                                                <div class="badge bg-primary  text-white mb-4" *ngSwitchCase="21">Bebidas</div>
                                             
                                             <p class="card-text text-truncate">{{item.descricao}}
                                             </p>
@@ -161,10 +163,12 @@
                                         <div class="card-body">
                                             <h3 class="card-title">{{item.nome}}</h3>
                                             <div class=""[ngSwitch]="item.categoria.id">
-                                                <div class="badge bg-warning text-white mb-4" *ngSwitchCase="12">Massas</div>
+                                                <div class="badge bg-warning text-white mb-4" *ngSwitchCase="19">Massas</div>
                                                 <div class="badge bg-success text-white mb-4" *ngSwitchCase="5">Vegetariano</div>
-                                                <div class="badge bg-primary text-white mb-4" *ngSwitchCase="13">Sobremesas</div>
-                                                <div class="badge bg-danger text-white mb-4" *ngSwitchCase="18">Carne</div>
+                                                <div class="badge bg-primary text-white mb-4" *ngSwitchCase="14">Sobremesas</div>
+                                                <div class="badge bg-danger text-white mb-4" *ngSwitchCase="15">Carne</div>
+                                                <div class="badge bg-warning  text-white mb-4" *ngSwitchCase="20">Salgados</div>
+                                                <div class="badge bg-primary  text-white mb-4" *ngSwitchCase="21">Bebidas</div>
                                             
                                             <p class="card-text text-truncate">{{item.descricao}}
                                             </p>

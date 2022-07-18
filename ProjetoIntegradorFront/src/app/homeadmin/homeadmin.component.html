@@ -29,10 +29,12 @@
 
                 <h3 class="card-title">{{item.nome}}</h3>
                 <div class=""[ngSwitch]="item.categoria.id">
-                  <div class="badge bg-warning text-white mb-4" *ngSwitchCase="12">Massas</div>
+                  <div class="badge bg-warning text-white mb-4" *ngSwitchCase="19">Massas</div>
                   <div class="badge bg-success text-white mb-4" *ngSwitchCase="5">Vegetariano</div>
-                  <div class="badge bg-primary text-white mb-4" *ngSwitchCase="13">Sobremesas</div>
-                  <div class="badge bg-danger text-white mb-4" *ngSwitchCase="18">Carne</div>
+                  <div class="badge bg-primary text-white mb-4" *ngSwitchCase="14">Sobremesas</div>
+                  <div class="badge bg-danger text-white mb-4" *ngSwitchCase="15">Carne</div>
+                  <div class="badge bg-warning  text-white mb-4" *ngSwitchCase="20">Salgados</div>
+                  <div class="badge bg-primary  text-white mb-4" *ngSwitchCase="21">Bebidas</div>
               
                 <p class="card-text">{{item.descricao}}</p>
 
